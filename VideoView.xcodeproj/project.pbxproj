@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */; };
+		1640CE2E2852FA3500F2728A /* BrightCoveConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */; };
 		16ACAA602852F3BB000210B2 /* VideoViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */; };
 		16ACAA622852F3BB000210B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACAA612852F3BB000210B2 /* ContentView.swift */; };
 		16ACAA642852F3BD000210B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ACAA632852F3BD000210B2 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveUIView.swift; sourceTree = "<group>"; };
+		1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveConstants.swift; sourceTree = "<group>"; };
 		16ACAA5C2852F3BB000210B2 /* VideoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewApp.swift; sourceTree = "<group>"; };
 		16ACAA612852F3BB000210B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */,
+				1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */,
 			);
 			path = BrightCoveCustom;
 			sourceTree = "<group>";
@@ -115,6 +118,7 @@
 				16ACAA5A2852F3BB000210B2 /* Resources */,
 				0CF65F3C872087F8558367D8 /* [CP] Embed Pods Frameworks */,
 				DAC420BD93A3A10944A895A8 /* [CP] Copy Pods Resources */,
+				1640CE2F2853010400F2728A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -188,6 +192,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoView/Pods-VideoView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1640CE2F2853010400F2728A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		5E8F47AD55183CC83E52F2C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +258,7 @@
 			files = (
 				16ACAA622852F3BB000210B2 /* ContentView.swift in Sources */,
 				1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */,
+				1640CE2E2852FA3500F2728A /* BrightCoveConstants.swift in Sources */,
 				16ACAA602852F3BB000210B2 /* VideoViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
