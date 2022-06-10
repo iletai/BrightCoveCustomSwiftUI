@@ -8,7 +8,7 @@ target 'VideoCustom' do
   source 'https://github.com/brightcove/BrightcoveSpecs.git'
   use_frameworks!
 
-  # Pods for VideoCustom
+  # Pods for VideoView
   pod 'Brightcove-Player-Core/XCFramework'
 
 
