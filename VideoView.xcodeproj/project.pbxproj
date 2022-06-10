@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */; };
 		1640CE2E2852FA3500F2728A /* BrightCoveConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */; };
+		1640CE3A28531A1000F2728A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1640CE3928531A1000F2728A /* .swiftlint.yml */; };
 		16ACAA602852F3BB000210B2 /* VideoViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */; };
 		16ACAA622852F3BB000210B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACAA612852F3BB000210B2 /* ContentView.swift */; };
 		16ACAA642852F3BD000210B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ACAA632852F3BD000210B2 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveUIView.swift; sourceTree = "<group>"; };
 		1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveConstants.swift; sourceTree = "<group>"; };
+		1640CE3928531A1000F2728A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		16ACAA5C2852F3BB000210B2 /* VideoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewApp.swift; sourceTree = "<group>"; };
 		16ACAA612852F3BB000210B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		16ACAA532852F3BB000210B2 = {
 			isa = PBXGroup;
 			children = (
+				1640CE3928531A1000F2728A /* .swiftlint.yml */,
 				16ACAA5E2852F3BB000210B2 /* VideoView */,
 				16ACAA5D2852F3BB000210B2 /* Products */,
 				5D6A20DDDF074E74B379F5EF /* Pods */,
@@ -167,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1640CE3A28531A1000F2728A /* .swiftlint.yml in Resources */,
 				16ACAA672852F3BD000210B2 /* Preview Assets.xcassets in Resources */,
 				16ACAA642852F3BD000210B2 /* Assets.xcassets in Resources */,
 			);
