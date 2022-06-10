@@ -15,8 +15,6 @@ struct ContentView: View {
     private let options = BCOVPUIPlayerViewOptions()
 
     init() {
-        let viewModel = VideoViewModel()
-        self.viewModel = viewModel
         let controlView = BCOVPUIBasicControlView()
         controlView.layout = BCOVPUIControlLayout.basicVOD()
         self.controlView = controlView
@@ -25,12 +23,21 @@ struct ContentView: View {
             options: options,
             controlsView: controlView
         )
+
         self.playerView = player
+        let viewModel = VideoViewModel(player: player)
+        self.viewModel = viewModel
+
         self.videoView = BrightCoveUIView(
             controller: viewModel.controller,
             uiView: playerView,
             services: viewModel.services
-        )
+        ) {
+            viewModel.onBack()
+        } onGo: {
+            viewModel.onGo()
+        }
+
     }
     var body: some View {
         ZStack {
@@ -46,5 +53,20 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension String {
+    func convertToTimeInterval() -> TimeInterval {
+        guard !isEmpty else {
+            return 0
+        }
+        var interval: Double = 0
+
+        let parts = components(separatedBy: ":")
+        for (index, part) in parts.reversed().enumerated() {
+            interval += (Double(part) ?? 0) * pow(Double(60), Double(index))
+        }
+        return interval
     }
 }

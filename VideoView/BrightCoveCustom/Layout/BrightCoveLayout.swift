@@ -12,8 +12,8 @@ import UIKit
 class BrightCoveLayout: NSObject {
     class func setLayout(
         forControlsView control: BCOVPUIBasicControlView,
-        onBack: @escaping () -> Void,
-        onGo: @escaping () -> Void
+        onBack: (()-> Void)?,
+        onGo: (()-> Void)?
     ) -> (BCOVPUIControlLayout?, BCOVPUILayoutView?) {
         let playbackLayoutView = BCOVPUIBasicControlView.layoutViewWithControl(
             from: .buttonPlayback, width: kBCOVPUILayoutUseDefaultValue, elasticity: 0.0
@@ -46,7 +46,7 @@ class BrightCoveLayout: NSObject {
             )
             btnGo.addSubview(button)
             button.addAction(for: .touchUpInside) {
-                onGo()
+                onGo?()
             }
         }
         if let btnBack = btnBackLayoutView {
@@ -58,7 +58,7 @@ class BrightCoveLayout: NSObject {
             )
             btnBack.addSubview(button)
             button.addAction(for: .touchUpInside) {
-                onBack()
+                onBack?()
             }
         }
         let standardLayoutLine1 = [progressLayoutView]

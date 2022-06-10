@@ -28,7 +28,8 @@ class Coordinator: NSObject, BCOVPlaybackControllerDelegate {
         switch eventType {
         case kBCOVPlaybackSessionLifecycleEventEnd:
             endVideo?()
-        default: let error = kBCOVVideoErrorCodeTags
+        default:
+            let error = kBCOVVideoErrorCodeTags
             print(error)
 
         }

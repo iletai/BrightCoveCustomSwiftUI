@@ -11,24 +11,28 @@ import SwiftUI
 
 struct BrightCoveUIView: UIViewRepresentable {
     typealias UIViewType = BCOVPUIPlayerView
-
-    let timeToSeek = 15.0
     var playerUIView: BCOVPUIPlayerView?
     var services: BCOVPlaybackService?
     var layoutView: BCOVPUILayoutView?
     var controller: BCOVPlaybackController?
     var eventOnEnd: (() -> Void)?
+    var onBack: (() -> Void)?
+    var onGo: (() -> Void)?
 
     init(
         controller: BCOVPlaybackController?,
         uiView: BCOVPUIPlayerView?,
         services: BCOVPlaybackService?,
-        endVideo: (() -> Void)? = nil
+        endVideo: (() -> Void)? = nil,
+        onBack: (() -> Void)? = nil,
+        onGo: (() -> Void)? = nil
     ) {
         self.services = services
         self.controller = controller
         self.playerUIView = uiView
         self.eventOnEnd = endVideo
+        self.onGo = onGo
+        self.onBack = onBack
         if let playerView = self.playerUIView {
             self.layoutView = self.configurationUI(forControlsView: playerView.controlsView)
             getVideo()
@@ -56,21 +60,15 @@ struct BrightCoveUIView: UIViewRepresentable {
         var layoutControl: BCOVPUIControlLayout?
         var layoutView: BCOVPUILayoutView?
         let (controlLayouts, layoutViews) =
-        BrightCoveLayout.setLayout(
-            forControlsView: control,
-            onBack: onBack,
-            onGo: onGo
-        )
+            BrightCoveLayout.setLayout(
+                forControlsView: control,
+                onBack: onBack,
+                onGo: onGo
+            )
         layoutControl = controlLayouts
         layoutView = layoutViews
         control.layout = layoutControl
         return layoutView
-    }
-
-    func onBack() {
-    }
-
-    func onGo() {
     }
 
     func getVideo() {
@@ -78,7 +76,7 @@ struct BrightCoveUIView: UIViewRepresentable {
             services?.findVideo(
                 withVideoID: BrightCoveConstants.VideoId,
                 parameters: nil,
-                completion: { (video: BCOVVideo?, _ , _) in
+                completion: { (video: BCOVVideo?, _, _) in
                     if let video = video {
                         self.controller?.setVideos([video] as NSFastEnumeration)
                     }

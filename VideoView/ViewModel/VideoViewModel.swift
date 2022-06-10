@@ -10,9 +10,10 @@ import Combine
 import Foundation
 
 final class VideoViewModel: ObservableObject {
+    let timeToSeek = 15.0
     var controller: BCOVPlaybackController? = {
         guard let manager = BCOVPlayerSDKManager.shared(),
-            let controller = manager.createPlaybackController()
+              let controller = manager.createPlaybackController()
         else {
             return nil
         }
@@ -27,6 +28,11 @@ final class VideoViewModel: ObservableObject {
             policyKey: BrightCoveConstants.PolicyKey
         )
     }()
+    let playerView: BCOVPUIPlayerView?
+    
+    init(player: BCOVPUIPlayerView?) {
+        self.playerView = player
+    }
 }
 
 extension VideoViewModel {
@@ -36,5 +42,40 @@ extension VideoViewModel {
 
     // TODO: - Combine: Get video or something
     func getVideoFromSeverSide() {
+    }
+
+    func onBack() {
+        guard let playerView = playerView else {
+            return
+        }
+        let time = playerView.controlsView.currentTimeLabel.text?.convertToTimeInterval()
+        let targetTime = (time ?? 0) - timeToSeek
+        if targetTime <= 0 {
+            let timeToBack = CMTime(seconds: 0, preferredTimescale: 1)
+            playerView.playbackController.seek(to: timeToBack) { _ in
+            }
+        } else {
+            let timeToBack = CMTime(seconds: targetTime, preferredTimescale: 1)
+            playerView.playbackController.seek(to: timeToBack) { _ in
+            }
+        }
+    }
+
+    func onGo() {
+        guard let playerView = playerView else {
+            return
+        }
+        let time = playerView.controlsView.currentTimeLabel.text?.convertToTimeInterval()
+        let duration = playerView.controlsView.durationLabel.text?.convertToTimeInterval()
+        let targetTime = (time ?? 0) + timeToSeek
+        if targetTime >= duration ?? 0 {
+            let timeToGo = CMTime(seconds: duration ?? 0, preferredTimescale: 1)
+            playerView.playbackController.seek(to: timeToGo) { _ in
+            }
+        } else {
+            let timeToGo = CMTime(seconds: targetTime, preferredTimescale: 1)
+            playerView.playbackController.seek(to: timeToGo) { _ in
+            }
+        }
     }
 }

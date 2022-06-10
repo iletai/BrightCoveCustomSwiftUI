@@ -10,7 +10,6 @@
 		1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */; };
 		1640CE2E2852FA3500F2728A /* BrightCoveConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */; };
 		1640CE3A28531A1000F2728A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1640CE3928531A1000F2728A /* .swiftlint.yml */; };
-		1640CE3C285332F900F2728A /* BrightCoveVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE3B285332F900F2728A /* BrightCoveVideoView.swift */; };
 		1640CE3E2853334700F2728A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE3D2853334700F2728A /* Coordinator.swift */; };
 		1640CE4128533AE100F2728A /* BrightCoveStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE4028533AE100F2728A /* BrightCoveStyle.swift */; };
 		1640CE442853483E00F2728A /* BrightCoveLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE432853483E00F2728A /* BrightCoveLayout.swift */; };
@@ -26,7 +25,6 @@
 		1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveUIView.swift; sourceTree = "<group>"; };
 		1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveConstants.swift; sourceTree = "<group>"; };
 		1640CE3928531A1000F2728A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		1640CE3B285332F900F2728A /* BrightCoveVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveVideoView.swift; sourceTree = "<group>"; };
 		1640CE3D2853334700F2728A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1640CE4028533AE100F2728A /* BrightCoveStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveStyle.swift; sourceTree = "<group>"; };
 		1640CE432853483E00F2728A /* BrightCoveLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveLayout.swift; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 				1640CE3F28533ACF00F2728A /* Style */,
 				1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */,
 				1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */,
-				1640CE3B285332F900F2728A /* BrightCoveVideoView.swift */,
 				1640CE3D2853334700F2728A /* Coordinator.swift */,
 			);
 			path = BrightCoveCustom;
@@ -303,7 +300,6 @@
 				1640CE47285353FB00F2728A /* VideoViewModel.swift in Sources */,
 				1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */,
 				1640CE3E2853334700F2728A /* Coordinator.swift in Sources */,
-				1640CE3C285332F900F2728A /* BrightCoveVideoView.swift in Sources */,
 				1640CE442853483E00F2728A /* BrightCoveLayout.swift in Sources */,
 				1640CE4128533AE100F2728A /* BrightCoveStyle.swift in Sources */,
 				1640CE2E2852FA3500F2728A /* BrightCoveConstants.swift in Sources */,
