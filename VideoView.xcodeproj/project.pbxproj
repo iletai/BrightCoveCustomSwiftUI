@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */; };
 		16ACAA602852F3BB000210B2 /* VideoViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */; };
 		16ACAA622852F3BB000210B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACAA612852F3BB000210B2 /* ContentView.swift */; };
 		16ACAA642852F3BD000210B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ACAA632852F3BD000210B2 /* Assets.xcassets */; };
 		16ACAA672852F3BD000210B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ACAA662852F3BD000210B2 /* Preview Assets.xcassets */; };
+		5DD59202CB0AD052E34D2B58 /* Pods_VideoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BAEABBD71CC6F86547B2F7 /* Pods_VideoView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveUIView.swift; sourceTree = "<group>"; };
 		16ACAA5C2852F3BB000210B2 /* VideoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewApp.swift; sourceTree = "<group>"; };
 		16ACAA612852F3BB000210B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		16ACAA632852F3BD000210B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16ACAA662852F3BD000210B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41BAEABBD71CC6F86547B2F7 /* Pods_VideoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8896797C9854DCBCBD96E12D /* Pods-VideoView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoView.debug.xcconfig"; path = "Target Support Files/Pods-VideoView/Pods-VideoView.debug.xcconfig"; sourceTree = "<group>"; };
+		96BF997C541927068BD440B6 /* Pods-VideoView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoView.release.xcconfig"; path = "Target Support Files/Pods-VideoView/Pods-VideoView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +32,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD59202CB0AD052E34D2B58 /* Pods_VideoView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1640CE2A2852F5C200F2728A /* BrightCoveCustom */ = {
+			isa = PBXGroup;
+			children = (
+				1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */,
+			);
+			path = BrightCoveCustom;
+			sourceTree = "<group>";
+		};
 		16ACAA532852F3BB000210B2 = {
 			isa = PBXGroup;
 			children = (
 				16ACAA5E2852F3BB000210B2 /* VideoView */,
 				16ACAA5D2852F3BB000210B2 /* Products */,
+				5D6A20DDDF074E74B379F5EF /* Pods */,
+				ECD9BBA778E81504C0009492 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +68,7 @@
 		16ACAA5E2852F3BB000210B2 /* VideoView */ = {
 			isa = PBXGroup;
 			children = (
+				1640CE2A2852F5C200F2728A /* BrightCoveCustom */,
 				16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */,
 				16ACAA612852F3BB000210B2 /* ContentView.swift */,
 				16ACAA632852F3BD000210B2 /* Assets.xcassets */,
@@ -67,6 +85,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5D6A20DDDF074E74B379F5EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8896797C9854DCBCBD96E12D /* Pods-VideoView.debug.xcconfig */,
+				96BF997C541927068BD440B6 /* Pods-VideoView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ECD9BBA778E81504C0009492 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41BAEABBD71CC6F86547B2F7 /* Pods_VideoView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16ACAA6A2852F3BD000210B2 /* Build configuration list for PBXNativeTarget "VideoView" */;
 			buildPhases = (
+				5E8F47AD55183CC83E52F2C4 /* [CP] Check Pods Manifest.lock */,
 				16ACAA582852F3BB000210B2 /* Sources */,
 				16ACAA592852F3BB000210B2 /* Frameworks */,
 				16ACAA5A2852F3BB000210B2 /* Resources */,
+				0CF65F3C872087F8558367D8 /* [CP] Embed Pods Frameworks */,
+				DAC420BD93A3A10944A895A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +170,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CF65F3C872087F8558367D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoView/Pods-VideoView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoView/Pods-VideoView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoView/Pods-VideoView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E8F47AD55183CC83E52F2C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAC420BD93A3A10944A895A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoView/Pods-VideoView-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoView/Pods-VideoView-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoView/Pods-VideoView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16ACAA582852F3BB000210B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				16ACAA622852F3BB000210B2 /* ContentView.swift in Sources */,
+				1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */,
 				16ACAA602852F3BB000210B2 /* VideoViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +361,7 @@
 		};
 		16ACAA6B2852F3BD000210B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8896797C9854DCBCBD96E12D /* Pods-VideoView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +391,7 @@
 		};
 		16ACAA6C2852F3BD000210B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BF997C541927068BD440B6 /* Pods-VideoView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
