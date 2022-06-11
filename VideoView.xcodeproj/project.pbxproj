@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */; };
+		1640CE2E2852FA3500F2728A /* BrightCoveConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */; };
+		1640CE3A28531A1000F2728A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1640CE3928531A1000F2728A /* .swiftlint.yml */; };
+		1640CE3E2853334700F2728A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE3D2853334700F2728A /* Coordinator.swift */; };
+		1640CE4128533AE100F2728A /* BrightCoveStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE4028533AE100F2728A /* BrightCoveStyle.swift */; };
+		1640CE442853483E00F2728A /* BrightCoveLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE432853483E00F2728A /* BrightCoveLayout.swift */; };
+		1640CE47285353FB00F2728A /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640CE46285353FB00F2728A /* VideoViewModel.swift */; };
 		16ACAA602852F3BB000210B2 /* VideoViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */; };
 		16ACAA622852F3BB000210B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACAA612852F3BB000210B2 /* ContentView.swift */; };
 		16ACAA642852F3BD000210B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ACAA632852F3BD000210B2 /* Assets.xcassets */; };
 		16ACAA672852F3BD000210B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16ACAA662852F3BD000210B2 /* Preview Assets.xcassets */; };
+		16EBAD562854BEE5006BD7EC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBAD552854BEE5006BD7EC /* StringExtension.swift */; };
+		16EBAD582854DF8B006BD7EC /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBAD572854DF8B006BD7EC /* ViewExtension.swift */; };
 		5DD59202CB0AD052E34D2B58 /* Pods_VideoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BAEABBD71CC6F86547B2F7 /* Pods_VideoView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveUIView.swift; sourceTree = "<group>"; };
+		1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveConstants.swift; sourceTree = "<group>"; };
+		1640CE3928531A1000F2728A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		1640CE3D2853334700F2728A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1640CE4028533AE100F2728A /* BrightCoveStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveStyle.swift; sourceTree = "<group>"; };
+		1640CE432853483E00F2728A /* BrightCoveLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightCoveLayout.swift; sourceTree = "<group>"; };
+		1640CE46285353FB00F2728A /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		16ACAA5C2852F3BB000210B2 /* VideoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewApp.swift; sourceTree = "<group>"; };
 		16ACAA612852F3BB000210B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		16ACAA632852F3BD000210B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16ACAA662852F3BD000210B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16EBAD552854BEE5006BD7EC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		16EBAD572854DF8B006BD7EC /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		41BAEABBD71CC6F86547B2F7 /* Pods_VideoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8896797C9854DCBCBD96E12D /* Pods-VideoView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoView.debug.xcconfig"; path = "Target Support Files/Pods-VideoView/Pods-VideoView.debug.xcconfig"; sourceTree = "<group>"; };
 		96BF997C541927068BD440B6 /* Pods-VideoView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoView.release.xcconfig"; path = "Target Support Files/Pods-VideoView/Pods-VideoView.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,14 +58,43 @@
 		1640CE2A2852F5C200F2728A /* BrightCoveCustom */ = {
 			isa = PBXGroup;
 			children = (
+				1640CE422853482E00F2728A /* Layout */,
+				1640CE3F28533ACF00F2728A /* Style */,
 				1640CE2B2852F5D500F2728A /* BrightCoveUIView.swift */,
+				1640CE2D2852FA3500F2728A /* BrightCoveConstants.swift */,
+				1640CE3D2853334700F2728A /* Coordinator.swift */,
 			);
 			path = BrightCoveCustom;
+			sourceTree = "<group>";
+		};
+		1640CE3F28533ACF00F2728A /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				1640CE4028533AE100F2728A /* BrightCoveStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		1640CE422853482E00F2728A /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				1640CE432853483E00F2728A /* BrightCoveLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		1640CE45285353E100F2728A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1640CE46285353FB00F2728A /* VideoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		16ACAA532852F3BB000210B2 = {
 			isa = PBXGroup;
 			children = (
+				1640CE3928531A1000F2728A /* .swiftlint.yml */,
 				16ACAA5E2852F3BB000210B2 /* VideoView */,
 				16ACAA5D2852F3BB000210B2 /* Products */,
 				5D6A20DDDF074E74B379F5EF /* Pods */,
@@ -68,9 +113,10 @@
 		16ACAA5E2852F3BB000210B2 /* VideoView */ = {
 			isa = PBXGroup;
 			children = (
-				1640CE2A2852F5C200F2728A /* BrightCoveCustom */,
+				16EBAD542854BED9006BD7EC /* Common */,
+				16EBAD532854BEB0006BD7EC /* View */,
+				1640CE45285353E100F2728A /* ViewModel */,
 				16ACAA5F2852F3BB000210B2 /* VideoViewApp.swift */,
-				16ACAA612852F3BB000210B2 /* ContentView.swift */,
 				16ACAA632852F3BD000210B2 /* Assets.xcassets */,
 				16ACAA652852F3BD000210B2 /* Preview Content */,
 			);
@@ -83,6 +129,24 @@
 				16ACAA662852F3BD000210B2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16EBAD532854BEB0006BD7EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16ACAA612852F3BB000210B2 /* ContentView.swift */,
+				1640CE2A2852F5C200F2728A /* BrightCoveCustom */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16EBAD542854BED9006BD7EC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				16EBAD552854BEE5006BD7EC /* StringExtension.swift */,
+				16EBAD572854DF8B006BD7EC /* ViewExtension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		5D6A20DDDF074E74B379F5EF /* Pods */ = {
@@ -115,6 +179,7 @@
 				16ACAA5A2852F3BB000210B2 /* Resources */,
 				0CF65F3C872087F8558367D8 /* [CP] Embed Pods Frameworks */,
 				DAC420BD93A3A10944A895A8 /* [CP] Copy Pods Resources */,
+				1640CE2F2853010400F2728A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -163,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1640CE3A28531A1000F2728A /* .swiftlint.yml in Resources */,
 				16ACAA672852F3BD000210B2 /* Preview Assets.xcassets in Resources */,
 				16ACAA642852F3BD000210B2 /* Assets.xcassets in Resources */,
 			);
@@ -187,6 +253,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoView/Pods-VideoView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1640CE2F2853010400F2728A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		5E8F47AD55183CC83E52F2C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -235,7 +319,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				16ACAA622852F3BB000210B2 /* ContentView.swift in Sources */,
+				1640CE47285353FB00F2728A /* VideoViewModel.swift in Sources */,
 				1640CE2C2852F5D500F2728A /* BrightCoveUIView.swift in Sources */,
+				1640CE3E2853334700F2728A /* Coordinator.swift in Sources */,
+				16EBAD582854DF8B006BD7EC /* ViewExtension.swift in Sources */,
+				1640CE442853483E00F2728A /* BrightCoveLayout.swift in Sources */,
+				16EBAD562854BEE5006BD7EC /* StringExtension.swift in Sources */,
+				1640CE4128533AE100F2728A /* BrightCoveStyle.swift in Sources */,
+				1640CE2E2852FA3500F2728A /* BrightCoveConstants.swift in Sources */,
 				16ACAA602852F3BB000210B2 /* VideoViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
