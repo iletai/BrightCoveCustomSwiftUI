@@ -39,13 +39,17 @@ struct ContentView: View {
         }
 
     }
+
     var body: some View {
         ZStack {
             videoView
+            if videoView.video == nil {
+                ProgressView()
+            }
         }
+        .ignoresSafeArea(.all)
         .onDisappear {
-            viewModel.controller?.pause()
-            viewModel.controller?.isAutoPlay = false
+            viewModel.pauseCurrentVideo()
         }
     }
 }
@@ -53,20 +57,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-extension String {
-    func convertToTimeInterval() -> TimeInterval {
-        guard !isEmpty else {
-            return 0
-        }
-        var interval: Double = 0
-
-        let parts = components(separatedBy: ":")
-        for (index, part) in parts.reversed().enumerated() {
-            interval += (Double(part) ?? 0) * pow(Double(60), Double(index))
-        }
-        return interval
     }
 }

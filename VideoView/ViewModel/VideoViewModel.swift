@@ -10,7 +10,6 @@ import Combine
 import Foundation
 
 final class VideoViewModel: ObservableObject {
-    let timeToSeek = 15.0
     var controller: BCOVPlaybackController? = {
         guard let manager = BCOVPlayerSDKManager.shared(),
               let controller = manager.createPlaybackController()
@@ -49,7 +48,7 @@ extension VideoViewModel {
             return
         }
         let time = playerView.controlsView.currentTimeLabel.text?.convertToTimeInterval()
-        let targetTime = (time ?? 0) - timeToSeek
+        let targetTime = (time ?? 0) - BrightCoveConstants.timeToSeek
         if targetTime <= 0 {
             let timeToBack = CMTime(seconds: 0, preferredTimescale: 1)
             playerView.playbackController.seek(to: timeToBack) { _ in
@@ -67,7 +66,7 @@ extension VideoViewModel {
         }
         let time = playerView.controlsView.currentTimeLabel.text?.convertToTimeInterval()
         let duration = playerView.controlsView.durationLabel.text?.convertToTimeInterval()
-        let targetTime = (time ?? 0) + timeToSeek
+        let targetTime = (time ?? 0) + BrightCoveConstants.timeToSeek
         if targetTime >= duration ?? 0 {
             let timeToGo = CMTime(seconds: duration ?? 0, preferredTimescale: 1)
             playerView.playbackController.seek(to: timeToGo) { _ in
@@ -77,5 +76,9 @@ extension VideoViewModel {
             playerView.playbackController.seek(to: timeToGo) { _ in
             }
         }
+    }
+
+    func pauseCurrentVideo() {
+        controller?.pause()
     }
 }

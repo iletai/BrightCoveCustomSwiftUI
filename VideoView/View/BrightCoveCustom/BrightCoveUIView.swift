@@ -18,14 +18,17 @@ struct BrightCoveUIView: UIViewRepresentable {
     var eventOnEnd: (() -> Void)?
     var onBack: (() -> Void)?
     var onGo: (() -> Void)?
+    var onScreenShot: (() -> Void)?
 
+    var video: BCOVVideo?
     init(
         controller: BCOVPlaybackController?,
         uiView: BCOVPUIPlayerView?,
         services: BCOVPlaybackService?,
         endVideo: (() -> Void)? = nil,
         onBack: (() -> Void)? = nil,
-        onGo: (() -> Void)? = nil
+        onGo: (() -> Void)? = nil,
+        onScreenShot: (()-> Void)? = nil
     ) {
         self.services = services
         self.controller = controller
@@ -33,9 +36,10 @@ struct BrightCoveUIView: UIViewRepresentable {
         self.eventOnEnd = endVideo
         self.onGo = onGo
         self.onBack = onBack
+        self.onScreenShot = onScreenShot
         if let playerView = self.playerUIView {
             self.layoutView = self.configurationUI(forControlsView: playerView.controlsView)
-            getVideo()
+            self.video = getVideo()
         }
     }
 
@@ -60,28 +64,33 @@ struct BrightCoveUIView: UIViewRepresentable {
         var layoutControl: BCOVPUIControlLayout?
         var layoutView: BCOVPUILayoutView?
         let (controlLayouts, layoutViews) =
-            BrightCoveLayout.setLayout(
-                forControlsView: control,
-                onBack: onBack,
-                onGo: onGo
-            )
+        BrightCoveLayout.setLayout(
+            forControlsView: control,
+            onBack: onBack,
+            onGo: onGo,
+            onScreenShot: onScreenShot
+        )
         layoutControl = controlLayouts
         layoutView = layoutViews
         control.layout = layoutControl
         return layoutView
     }
 
-    func getVideo() {
+    func getVideo() -> BCOVVideo? {
+        var videos: BCOVVideo? = nil
         if services != nil {
             services?.findVideo(
                 withVideoID: BrightCoveConstants.VideoId,
                 parameters: nil,
                 completion: { (video: BCOVVideo?, _, _) in
-                    if let video = video {
-                        self.controller?.setVideos([video] as NSFastEnumeration)
+                    guard let video = video else {
+                        return
                     }
+                    self.controller?.setVideos([video] as NSFastEnumeration)
+                    videos = video
                 }
             )
         }
+        return videos
     }
 }

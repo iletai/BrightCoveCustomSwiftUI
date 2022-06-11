@@ -13,7 +13,8 @@ class BrightCoveLayout: NSObject {
     class func setLayout(
         forControlsView control: BCOVPUIBasicControlView,
         onBack: (()-> Void)?,
-        onGo: (()-> Void)?
+        onGo: (()-> Void)?,
+        onScreenShot: (()-> Void)?
     ) -> (BCOVPUIControlLayout?, BCOVPUILayoutView?) {
         let playbackLayoutView = BCOVPUIBasicControlView.layoutViewWithControl(
             from: .buttonPlayback, width: kBCOVPUILayoutUseDefaultValue, elasticity: 0.0
@@ -37,11 +38,27 @@ class BrightCoveLayout: NSObject {
         let btnGoBackLayoutView = BCOVPUIBasicControlView.layoutViewWithControl(
             from: .viewEmpty, width: 30, elasticity: 0.0
         )
+        let btnTakeScreenShotView = BCOVPUIBasicControlView.layoutViewWithControl(
+            from: .viewEmpty, width: 30, elasticity: 0.0
+        )
+        if let btnTakeScreenShotView = btnTakeScreenShotView {
+            let button = UIButton(frame: btnTakeScreenShotView.frame)
+            button.tintColor = .white
+            button.setImage(
+                UIImage(systemName: "camera.viewfinder"),
+                for: .normal
+            )
+            btnTakeScreenShotView.addSubview(button)
+            button.addAction(for: .touchUpInside) {
+                onScreenShot?()
+            }
+        }
+        let screenModeLayoutView = BCOVPUIBasicControlView.layoutViewWithControl(from: .buttonScreenMode, width: kBCOVPUILayoutUseDefaultValue, elasticity: 0.0)
         if let btnGo = btnGoBackLayoutView {
             let button = UIButton(frame: btnGo.frame)
             button.tintColor = .white
             button.setImage(
-                UIImage(systemName: "goforward"),
+                UIImage(systemName: "goforward.15"),
                 for: .normal
             )
             btnGo.addSubview(button)
@@ -53,7 +70,7 @@ class BrightCoveLayout: NSObject {
             let button = UIButton(frame: btnBack.frame)
             button.tintColor = .white
             button.setImage(
-                UIImage(systemName: "gobackward"),
+                UIImage(systemName: "gobackward.15"),
                 for: .normal
             )
             btnBack.addSubview(button)
@@ -62,14 +79,15 @@ class BrightCoveLayout: NSObject {
             }
         }
         let standardLayoutLine1 = [progressLayoutView]
-        let standardLayoutLine2 = [ spacerLayoutView, spacerLayoutView, currentTimeLayoutView, spacerLayoutView,
-            btnGoBackLayoutView, playbackLayoutView,
-            btnBackLayoutView, spacerLayoutView, durationLayoutView, spacerLayoutView, spacerLayoutView,
+        let standardLayoutLine2 = [ spacerLayoutView, spacerLayoutView,btnTakeScreenShotView, currentTimeLayoutView, spacerLayoutView,
+                                    btnGoBackLayoutView, playbackLayoutView,
+                                    btnBackLayoutView, spacerLayoutView, durationLayoutView,screenModeLayoutView, spacerLayoutView, spacerLayoutView,
+
         ]
         let standardLayoutLines = [standardLayoutLine1, standardLayoutLine2]
         let compactLayoutLine1 = [progressLayoutView]
-        let compactLayoutLine2 = [ spacerLayoutView, currentTimeLayoutView, spacerLayoutView, btnBackLayoutView,
-            playbackLayoutView, btnGoBackLayoutView, spacerLayoutView, durationLayoutView, spacerLayoutView,
+        let compactLayoutLine2 = [  spacerLayoutView, btnTakeScreenShotView, currentTimeLayoutView, spacerLayoutView, btnBackLayoutView,
+                                   playbackLayoutView, btnGoBackLayoutView, spacerLayoutView, durationLayoutView,screenModeLayoutView, spacerLayoutView,
         ]
         let compactLayoutLines = [compactLayoutLine1, compactLayoutLine2]
         let layout = BCOVPUIControlLayout(
